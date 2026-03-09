@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — BrightPath Solutions</title>
+  <meta name="description" content="Get in touch with BrightPath Solutions. Book a free 30-minute consultation or send us a message — we respond within 1 business day.">
+  <link rel="canonical" href="https://brightpathsolutions.com/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="logo" aria-label="BrightPath Solutions — Home">
+          <div class="logo__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="white"/></svg>
+          </div>
+          <span class="logo__text"><span>Bright</span>Path Solutions</span>
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="index.html" class="nav__link" data-page="index.html">Home</a>
+          <a href="services.html" class="nav__link" data-page="services.html">Services</a>
+          <a href="about.html" class="nav__link" data-page="about.html">About</a>
+          <a href="contact.html" class="btn btn--primary nav__cta" data-page="contact.html" aria-current="page">Get in Touch</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-drawer">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-drawer" id="nav-drawer" aria-label="Mobile navigation">
+      <a href="index.html" class="nav__link" data-page="index.html">Home</a>
+      <a href="services.html" class="nav__link" data-page="services.html">Services</a>
+      <a href="about.html" class="nav__link" data-page="about.html">About</a>
+      <a href="contact.html" class="btn btn--primary">Get in Touch</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="contact-page-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <span class="breadcrumb__item"><a href="index.html">Home</a></span>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <span class="breadcrumb__item">Contact</span>
+        </nav>
+        <h1 class="page-hero__title" id="contact-page-title">Get in Touch</h1>
+        <p class="page-hero__subtitle">
+          Have a question or ready to get started? We're here and happy to help — usually responding within 1 business day.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT BODY -->
+    <section class="section" aria-labelledby="contact-form-heading">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- LEFT: Contact Form -->
+          <div>
+            <div class="form" role="region" aria-labelledby="contact-form-heading">
+              <h2 class="form__title" id="contact-form-heading">Send Us a Message</h2>
+              <p class="form__intro">Fill out the form below and one of our team members will reach out to schedule a free 30-minute consultation.</p>
+
+              <!-- Success message (hidden until form submit) -->
+              <div class="form__success" id="form-success" role="alert" aria-live="polite">
+                <p>✅ <strong>Thank you!</strong> Your message has been sent. We'll be in touch within 1 business day.</p>
+              </div>
+
+              <form
+                id="contact-form"
+                action="https://formspree.io/f/PLACEHOLDER"
+                method="POST"
+                novalidate
+                aria-label="Contact form"
+              >
+                <!-- Name + Email row -->
+                <div class="form__row form__row--2">
+                  <div class="form__group">
+                    <label class="form__label form__label--required" for="full-name">Full Name</label>
+                    <input
+                      class="form__input"
+                      type="text"
+                      id="full-name"
+                      name="full_name"
+                      placeholder="Jane Smith"
+                      required
+                      autocomplete="name"
+                      aria-required="true"
+                    >
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label form__label--required" for="email">Email Address</label>
+                    <input
+                      class="form__input"
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="jane@company.com"
+                      required
+                      autocomplete="email"
+                      aria-required="true"
+                    >
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="form__group">
+                  <label class="form__label" for="phone">Phone Number <span class="text-muted text-xs">(optional)</span></label>
+                  <input
+                    class="form__input"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+1 (555) 000-0000"
+                    autocomplete="tel"
+                  >
+                </div>
+
+                <!-- Subject -->
+                <div class="form__group">
+                  <label class="form__label form__label--required" for="subject">Subject</label>
+                  <select class="form__select" id="subject" name="subject" required aria-required="true">
+                    <option value="" disabled selected>Select a topic…</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="quote">Request a Quote</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <!-- Message -->
+                <div class="form__group">
+                  <label class="form__label form__label--required" for="message">Your Message</label>
+                  <textarea
+                    class="form__textarea"
+                    id="message"
+                    name="message"
+                    placeholder="Tell us how we can help you…"
+                    required
+                    aria-required="true"
+                    rows="5"
+                  ></textarea>
+                </div>
+
+                <button class="btn btn--primary btn--lg form__submit" type="submit" id="submit-btn">
+                  Send Your Message
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- RIGHT: Contact Details -->
+          <aside class="contact-details" aria-label="Contact information">
+
+            <!-- Info card -->
+            <div class="contact-info-card">
+              <h3>Contact Information</h3>
+
+              <div class="contact-info-item">
+                <div class="contact-info-item__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="contact-info-item__text">
+                  <strong>Address</strong>
+                  <span>84 Elmwood Avenue, Suite 210<br>Austin, TX 78701</span>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-item__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="contact-info-item__text">
+                  <strong>Phone</strong>
+                  <span><a href="tel:+15128490032" style="color: var(--color-primary);">+1 (512) 849-0032</a></span>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-item__icon" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="contact-info-item__text">
+                  <strong>Email</strong>
+                  <span><a href="mailto:hello@brightpathsolutions.com" style="color: var(--color-primary);">hello@brightpathsolutions.com</a></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hours card -->
+            <div class="contact-info-card">
+              <h3>Business Hours</h3>
+              <table class="hours-table" aria-label="Business operating hours">
+                <tbody>
+                  <tr>
+                    <td>Monday – Friday</td>
+                    <td>9:00 AM – 6:00 PM CST</td>
+                  </tr>
+                  <tr>
+                    <td>Saturday</td>
+                    <td>10:00 AM – 2:00 PM CST</td>
+                  </tr>
+                  <tr>
+                    <td>Sunday</td>
+                    <td>Closed</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="logo footer__logo" aria-label="BrightPath Solutions">
+            <div class="logo__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <span class="logo__text"><span>Bright</span>Path Solutions</span>
+          </a>
+          <p class="footer__tagline">Empowering small businesses to grow with confidence.</p>
+          <div class="footer__social" aria-label="Social media links">
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">f</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="services.html" class="footer__link">Services</a></li>
+            <li><a href="about.html" class="footer__link">About Us</a></li>
+            <li><a href="contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Contact</h3>
+          <div class="footer__contact-item"><span>📍</span><span>84 Elmwood Avenue, Suite 210,<br>Austin, TX 78701</span></div>
+          <div class="footer__contact-item"><span>📞</span><a href="tel:+15128490032" class="footer__link">+1 (512) 849-0032</a></div>
+          <div class="footer__contact-item"><span>✉️</span><a href="mailto:hello@brightpathsolutions.com" class="footer__link">hello@brightpathsolutions.com</a></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 BrightPath Solutions. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

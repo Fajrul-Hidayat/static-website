@@ -1,0 +1,154 @@
+/* =============================================================
+   LAYOUT.CSS — Grid, Container, Section Rhythm
+   ============================================================= */
+
+/* ── Container ─────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+  }
+}
+
+/* ── Text Container ─────────────────────────────────────────── */
+.container--text {
+  max-width: var(--text-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Section Rhythm ─────────────────────────────────────────── */
+.section {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.section--hero {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.section--compact {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+}
+
+/* ── Grid ───────────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.grid--2 {
+  grid-template-columns: 1fr;
+}
+
+.grid--3 {
+  grid-template-columns: 1fr;
+}
+
+.grid--4 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    gap: var(--space-md);
+  }
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ── Flex Utilities ─────────────────────────────────────────── */
+.flex {
+  display: flex;
+}
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+.flex--between {
+  align-items: center;
+  justify-content: space-between;
+}
+.flex--col {
+  flex-direction: column;
+}
+.flex--wrap {
+  flex-wrap: wrap;
+}
+.flex--gap-sm {
+  gap: var(--space-sm);
+}
+.flex--gap-md {
+  gap: var(--space-md);
+}
+
+/* ── Section Header ─────────────────────────────────────────── */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: var(--type-caption);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+}
+
+.section-header h2 {
+  margin-bottom: var(--space-xs);
+}
+
+.section-header p {
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Backgrounds ────────────────────────────────────────────── */
+.bg-primary    { background-color: var(--color-primary); }
+.bg-surface    { background-color: var(--color-surface); }
+.bg-tinted     { background-color: var(--color-surface-tinted); }
+.bg-background { background-color: var(--color-background); }
+.bg-hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #2A4A7A 100%);
+}
+.bg-footer {
+  background-color: var(--color-footer-bg);
+}
+
+/* ── Text Color Utilities ───────────────────────────────────── */
+.text-inverse  { color: var(--color-text-inverse); }
+.text-muted    { color: var(--color-text-muted); }
+.text-accent   { color: var(--color-accent); }
+.text-primary  { color: var(--color-primary); }
+.text-center   { text-align: center; }

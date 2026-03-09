@@ -1,0 +1,63 @@
+/* =============================================================
+   PAGES.CSS — Page-Specific Overrides
+   ============================================================= */
+
+/* ── HOME PAGE ──────────────────────────────────────────────── */
+/* Hero section with image column already handled in components */
+
+/* ── SERVICES PAGE ──────────────────────────────────────────── */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── ABOUT PAGE ─────────────────────────────────────────────── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── CONTACT PAGE ───────────────────────────────────────────── */
+.contact-form {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-card);
+}
+
+.contact-form .form-group {
+  margin-bottom: var(--space-md);
+}
+
+.contact-form .form-group:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Submit button full width on contact */
+.btn--full {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ── ACTIVE NAV STATE ────────────────────────────────────────── */
+/* Applied via JS based on current page */
